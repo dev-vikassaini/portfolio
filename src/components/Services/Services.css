@@ -10,8 +10,8 @@
 }
 
 .services-button {
-    width: 8rem;
-    height: 2rem;
+    width: 10rem;
+    height: 2.5rem;
     margin-top: 1rem;
 }
 
@@ -57,4 +57,24 @@
 .service-blur2 {
     left: 14rem;
     top: 8rem;
+}
+
+@media screen and (max-width: 480px) {
+    .services-container {
+        margin-top: 0;
+        flex-direction: column;
+        gap: 5rem;
+        height: 66rem;
+        padding: 0;
+    }
+
+    .services-right {
+        display: flex;
+        flex-direction: column;
+        gap: 17rem;
+    }
+
+    .services-right>* {
+        position: static;
+    }
 }

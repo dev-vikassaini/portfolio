@@ -6,7 +6,7 @@ function Navbar() {
         <React.Fragment>
             <div className="navbar-container">
                 <div className="navbar-left">
-                    <div className='profile-name'>Vikas Saini</div>
+                    <div className='profile-name'>VIKAS KUMAR</div>
                     <span>Toggle</span>
                 </div>
                 <div className="navbar-right">
@@ -19,7 +19,7 @@ function Navbar() {
                             <li>Testimonials</li>
                         </ul>
                     </div>
-                    <div className='button'>
+                    <div className='button nav-button'>
                         Contact
                     </div>
                 </div>

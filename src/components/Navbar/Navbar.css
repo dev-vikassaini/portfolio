@@ -39,3 +39,9 @@
     cursor: pointer;
     color: var(--orange);
 }
+
+@media screen and (max-width: 480px) {
+    .navbar-list {
+        display: none;
+    }
+}
