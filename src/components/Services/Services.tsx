@@ -5,7 +5,14 @@ import Glasses from "../../assets/img/glasses.png";
 import Humble from "../../assets/img/humble.png";
 import Card from '../Card/Card';
 import Resume from "../../assets/img/heartemoji.png";
+import { motion } from "framer-motion";
+
+
 function Services() {
+    const transition = {
+        duration: 1,
+        type: "spring",
+    };
     return (
         <React.Fragment>
             <div className='services-container'>
@@ -23,23 +30,32 @@ function Services() {
                     <div className='blur service-blur1' style={{ background: '#ABF1FF94' }}></div>
                 </div>
                 <div className='services-right'>
-                    <div style={{ left: '14rem' }}>
+                    <motion.div
+                        initial={{ left: "25rem" }}
+                        whileInView={{ left: "14rem" }}
+                        transition={transition}>
                         <Card
                             emoji={HeartEmoji}
                             heading={"Design"}
                             detail={"Figma, Sketch, Photoshop, Adobe Illustrator, Adobe xd"}
                         />
-                    </div>
+                    </motion.div>
 
-                    <div style={{ top: "12rem", left: '-4rem' }}>
+                    <motion.div
+                        initial={{ left: "-11rem", top: "12rem" }}
+                        whileInView={{ left: "-4rem" }}
+                        transition={transition}>
                         <Card
                             emoji={Glasses}
                             heading={"Developer"}
                             detail={"Html, Css, JavaScript, React, Nodejs, Express"}
                         />
-                    </div>
+                    </motion.div>
 
-                    <div style={{ top: "19rem", left: '12rem' }}>
+                    <motion.div
+                        initial={{ top: "22rem", left: "25rem" }}
+                        whileInView={{ left: "14rem" }}
+                        transition={transition}>
                         <Card
                             emoji={Humble}
                             heading={"UI/UX"}
@@ -47,7 +63,7 @@ function Services() {
                                 "Lorem ispum dummy text are usually use in section where we need some random text"
                             }
                         />
-                    </div>
+                    </motion.div>
 
                     <div className="blur service-blur2"
                         style={{ background: "var(--purple)" }}></div>

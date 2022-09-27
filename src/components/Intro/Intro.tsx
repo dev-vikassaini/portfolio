@@ -12,7 +12,10 @@ import crown from '../../assets/img/crown.png';
 import glassesimoji from '../../assets/img/glassesimoji.png';
 import Floating from '../Floating/Floating';
 
+import { motion } from 'framer-motion';
+
 function Intro() {
+    const transition = { duration: 2, type: "spring" };
     return (
         <React.Fragment>
             <div className='intro-container'>
@@ -35,13 +38,26 @@ function Intro() {
                     <a href="#!"><img src={Vector1} alt="Vector1" /></a>
                     <a href="#!"><img src={Vector2} alt="Vector2" /></a>
                     <a href="#!"><img src={boy} alt="boy" /></a>
-                    <img src={glassesimoji} alt="Glassesimoji" />
-                    <div className='floating-1'>
+                    <motion.img
+                        initial={{ left: "-36%" }}
+                        whileInView={{ left: "-24%" }}
+                        transition={transition}
+                        src={glassesimoji} alt="Glassesimoji" />
+
+
+                    <motion.div
+                        initial={{ top: "-4%", left: "74%" }}
+                        whileInView={{ left: "68%" }}
+                        transition={transition} className='floating-1'>
                         <Floating image={crown} keySkill="Fullstack" position="Developer" />
-                    </div>
-                    <div className='floating-2'>
+                    </motion.div>
+
+                    <motion.div
+                        initial={{ left: "9rem", top: "18rem" }}
+                        whileInView={{ left: "0rem" }}
+                        transition={transition} className='floating-2'>
                         <Floating image={thumbup} keySkill="React,Angular,.NET CORE" position="Developer" />
-                    </div>
+                    </motion.div>
 
                     <div className='blur' style={{ background: "rgb(238 210 255)" }}></div>
                     <div className='blur' style={{ background: '#CIF5FF', top: '17rem', width: '21rem', height: '11rem', left: '-9rem' }}></div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Navbar.css';
+import Switch from '../Switch/Switch';
 
 function Navbar() {
     return (
@@ -7,7 +8,7 @@ function Navbar() {
             <div className="navbar-container">
                 <div className="navbar-left">
                     <div className='profile-name'>VIKAS KUMAR</div>
-                    <span>Toggle</span>
+                    <Switch />
                 </div>
                 <div className="navbar-right">
                     <div className='navbar-list'>
